@@ -1,0 +1,51 @@
+body{
+    min-height:100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas:
+    "text"
+    "map";
+}
+
+h1{
+    font-family: lato;
+}
+
+#text{
+    grid-area: text;
+    display:flex;
+    flex-flow:column;
+    justify-content: center;
+    align-items: center;
+}
+
+#mapid { 
+    grid-area: map;
+    height: 100%; 
+};
+
+@media only screen and (min-width: 768px){
+    body {
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 1fr 7fr;
+        grid-template-areas: 
+        "text text text"
+        "map map map";
+    }
+
+
+    }
+
+
+@media only screen and (min-width: 1024px){
+    body {
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: 1fr 7fr;
+        grid-template-areas: 
+        "text text text text text"
+        "map map map map map";
+    }
+   
+    }  
+
